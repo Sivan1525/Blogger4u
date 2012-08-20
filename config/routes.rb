@@ -9,5 +9,7 @@ Blogger::Application.routes.draw do
  resources :articles
  resources :comments
  resources :tags
- 
+	resources :author_sessions
+	match 'login' => 'author_sessions#new', :as => :login
+	match 'logout' => 'author_sessions#destroy', :as => :logout
 end

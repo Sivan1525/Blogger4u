@@ -30848,3 +30848,664 @@ Served asset /tags.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-20 15:54:04 +0530
 Served asset /application.js - 304 Not Modified (3ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-20 16:34:42 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles" [0m
+  Rendered articles/index.html.erb within layouts/application (0.0ms)
+Compiled author_sessions.css  (390ms)  (pid 640)
+Compiled application.css  (733ms)  (pid 640)
+Compiled author_sessions.js  (1638ms)  (pid 640)
+Compiled application.js  (1700ms)  (pid 640)
+Completed 200 OK in 3370ms (Views: 3307.2ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:47 +0530
+Served asset /application.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:47 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:47 +0530
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:47 +0530
+Served asset /screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:47 +0530
+Served asset /authors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:47 +0530
+Served asset /author_sessions.css - 200 OK (0ms)
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:47 +0530
+Served asset /tags.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:47 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:47 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:47 +0530
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:47 +0530
+Served asset /author_sessions.js - 200 OK (0ms)
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:47 +0530
+Served asset /authors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:47 +0530
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:47 +0530
+Served asset /tags.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:47 +0530
+Served asset /application.js - 304 Not Modified (78ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2012-08-20 16:34:51 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."article_id" = 1[0m
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = 1
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1
+  Rendered articles/_comment.html.erb (31.2ms)
+  Rendered articles/_comment_form.html.erb (0.0ms)
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = 1[0m
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from _app_views_articles_show_html_erb__644017917_21844800 at C:/Users/GTPL/Desktop/blogger_last/app/views/articles/show.html.erb:17)
+  Rendered articles/show.html.erb within layouts/application (202.8ms)
+Completed 200 OK in 281ms (Views: 218.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:51 +0530
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:51 +0530
+Served asset /author_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:51 +0530
+Served asset /comments.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:51 +0530
+Served asset /authors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:51 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:51 +0530
+Served asset /screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:51 +0530
+Served asset /tags.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:51 +0530
+Served asset /jquery.js - 304 Not Modified (46ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:51 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:51 +0530
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:51 +0530
+Served asset /author_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:51 +0530
+Served asset /authors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:51 +0530
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:51 +0530
+Served asset /tags.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:52 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-08-20 16:34:55 +0530
+Processing by AuthorSessionsController#new as HTML
+  Rendered author_sessions/new.html.haml within layouts/application (15.6ms)
+Completed 200 OK in 125ms (Views: 46.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:55 +0530
+Served asset /author_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:55 +0530
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:55 +0530
+Served asset /screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:55 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:55 +0530
+Served asset /authors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:55 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2012-08-20 16:34:55 +0530
+Served asset /tags.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:55 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:55 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:55 +0530
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:55 +0530
+Served asset /author_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:55 +0530
+Served asset /authors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:55 +0530
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:55 +0530
+Served asset /tags.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-20 16:34:55 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/author_sessions" for 127.0.0.1 at 2012-08-20 16:35:09 +0530
+Processing by AuthorSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"upilmFMtj1r+rwxMsgd4djTtfpB+7+i+LgrdlbvwuyM=", "username"=>"siva20078", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE (username = 'siva20078') LIMIT 1
+  Rendered author_sessions/new.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 78ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:09 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:09 +0530
+Served asset /authors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:09 +0530
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:09 +0530
+Served asset /screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:09 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:09 +0530
+Served asset /author_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:09 +0530
+Served asset /tags.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:09 +0530
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:09 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:09 +0530
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:09 +0530
+Served asset /author_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:09 +0530
+Served asset /authors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:09 +0530
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:09 +0530
+Served asset /tags.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:09 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/author_sessions" for 127.0.0.1 at 2012-08-20 16:35:21 +0530
+Processing by AuthorSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"upilmFMtj1r+rwxMsgd4djTtfpB+7+i+LgrdlbvwuyM=", "username"=>"Sivan", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE (username = 'Sivan') LIMIT 1[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 234ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-08-20 16:35:22 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (15.6ms)[0m  SELECT "articles".* FROM "articles" 
+  Rendered articles/index.html.erb within layouts/application (0.0ms)
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 62ms (Views: 46.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:22 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:22 +0530
+Served asset /authors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:22 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:22 +0530
+Served asset /author_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:22 +0530
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:22 +0530
+Served asset /screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:22 +0530
+Served asset /tags.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:22 +0530
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:22 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:22 +0530
+Served asset /articles.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:22 +0530
+Served asset /author_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:22 +0530
+Served asset /authors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:22 +0530
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:22 +0530
+Served asset /tags.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:22 +0530
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2012-08-20 16:35:25 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."article_id" = 1[0m
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = 1
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1
+  Rendered articles/_comment.html.erb (15.6ms)
+  Rendered articles/_comment_form.html.erb (0.0ms)
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = 1[0m
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from _app_views_articles_show_html_erb__644017917_21844800 at C:/Users/GTPL/Desktop/blogger_last/app/views/articles/show.html.erb:17)
+  Rendered articles/show.html.erb within layouts/application (31.2ms)
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+Completed 200 OK in 62ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:25 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:25 +0530
+Served asset /author_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:25 +0530
+Served asset /authors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:25 +0530
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:25 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:25 +0530
+Served asset /screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:25 +0530
+Served asset /tags.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:25 +0530
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:25 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:25 +0530
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:25 +0530
+Served asset /author_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:25 +0530
+Served asset /authors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:25 +0530
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:25 +0530
+Served asset /tags.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:25 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2012-08-20 16:35:33 +0530
+Processing by AuthorSessionsController#destroy as HTML
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2012-08-20 16:35:33 +0530
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" 
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in _app_views_authors_index_html_haml__764317744_38636352 at C:/Users/GTPL/Desktop/blogger_last/app/views/authors/index.html.haml:17)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in _app_views_authors_index_html_haml__764317744_38636352 at C:/Users/GTPL/Desktop/blogger_last/app/views/authors/index.html.haml:17)
+  Rendered authors/index.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 62ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:33 +0530
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:33 +0530
+Served asset /author_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:33 +0530
+Served asset /authors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:33 +0530
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:33 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:33 +0530
+Served asset /screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:33 +0530
+Served asset /tags.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:33 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:33 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:33 +0530
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:33 +0530
+Served asset /author_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:33 +0530
+Served asset /authors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:33 +0530
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:33 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:33 +0530
+Served asset /tags.js - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-08-20 16:35:35 +0530
+Processing by AuthorSessionsController#new as HTML
+  Rendered author_sessions/new.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:35 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:35 +0530
+Served asset /author_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:35 +0530
+Served asset /authors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:35 +0530
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:35 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:35 +0530
+Served asset /screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:35 +0530
+Served asset /tags.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:35 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:35 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:35 +0530
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:35 +0530
+Served asset /author_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:35 +0530
+Served asset /authors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:35 +0530
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:35 +0530
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:36 +0530
+Served asset /tags.js - 304 Not Modified (0ms)
+
+
+Started POST "/author_sessions" for 127.0.0.1 at 2012-08-20 16:35:46 +0530
+Processing by AuthorSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MxDus1JgWoKwsbE7wLjsNJ1gQw5RoFTXc+U9gJFBZZQ=", "username"=>"Sivanand", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE (username = 'Sivanand') LIMIT 1[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 281ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-08-20 16:35:47 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles" 
+  Rendered articles/index.html.erb within layouts/application (0.0ms)
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 2 LIMIT 1[0m
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:47 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:47 +0530
+Served asset /author_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:47 +0530
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:47 +0530
+Served asset /authors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:47 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:47 +0530
+Served asset /screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2012-08-20 16:35:47 +0530
+Served asset /tags.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:47 +0530
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:47 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:47 +0530
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:47 +0530
+Served asset /author_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:47 +0530
+Served asset /authors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:47 +0530
+Served asset /tags.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:47 +0530
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-20 16:35:47 +0530
+Served asset /application.js - 304 Not Modified (15ms)
