@@ -1,0 +1,22 @@
+
+<h1><%=@article.title %></h1>
+
+<p><%= image_tag @article.image.url %></p>
+
+
+
+<h3>Comments{<%= @article.comments.count %>}</h3>
+<hr>
+ <%= render :partial=>'comment', :collection=>@article.comments %>
+ <%=render :partial=>'comment_form'%>
+<hr/>
+<p>Tags: <%= tag_links(@article.tags) %></p>
+<p><%=@article.body%></p>
+<hr />
+
+<i><%=link_to 'Delete', article_path(@article),:method=>:delete ,:confirm=>"Are you sure to delete #{@article.title}?"%><i/>
+<br/>
+<%=link_to 'Edit',edit_article_path(@article)%><br />
+<%= link_to "Back to Articles",{:action=>'index',:controller=>'articles'}%>
+
+

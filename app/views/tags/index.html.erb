@@ -1,0 +1,11 @@
+<h1>All Tags</h1>
+
+<table>
+  <% @tags.each do |tag| %>
+    <tr>
+   <td> <%= link_to tag.name, tag_path(tag) %>&nbsp&nbsp</td>
+    
+   <td> <%= link_to "destroy", tag_path(tag), :method => :delete %></td>
+</tr>
+  <% end %>
+</table>
