@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
-	def create
+	before_filter :require_login, :except => [:create]
+  def create
     article_id = params[:comment].delete(:article_id)
 
     @comment = Comment.new(params[:comment])
@@ -9,6 +10,6 @@ class CommentsController < ApplicationController
 
     redirect_to article_path(@comment.article)
   end
-  def index
-  end
+ 
+
   end

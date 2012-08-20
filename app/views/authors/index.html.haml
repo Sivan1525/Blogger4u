@@ -3,17 +3,19 @@
 %table
   %tr
     %th Username
+    %th
     %th Email
-    %th
-    %th
-    %th
+    
 
   - @authors.each do |author|
     %tr
       %td= author.username
+      %th
       %td= author.email
       %td= link_to 'Show', author
+      %th
       %td= link_to 'Edit', edit_author_path(author)
+      %th
       %td= link_to 'Destroy', author, :confirm => 'Are you sure?', :method => :delete
 
 %br
