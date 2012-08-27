@@ -42479,3 +42479,5 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2012-08-20 19:06:14 +0530
 Served asset /tags.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
